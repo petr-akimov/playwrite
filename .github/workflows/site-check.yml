@@ -2,7 +2,7 @@ name: Weekly Browser Check
 
 on:
   schedule:
-    - cron: '0 8 * * 1'
+    - cron: '0 13 * * 5'
 
   workflow_dispatch:
 
@@ -20,6 +20,11 @@ jobs:
       - run: npm install playwright
 
       - run: npx playwright install chromium
+
+      - name: Show runner time
+        run: |
+          date
+          date -u
 
       - name: Check site
         run: |
