@@ -2,7 +2,7 @@ name: Weekly Browser Check
 
 on:
   schedule:
-    - cron: '0 13 * * 5'
+    - cron: '15 10 * * 5'
 
   workflow_dispatch:
 
